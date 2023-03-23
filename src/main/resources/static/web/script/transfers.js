@@ -20,7 +20,7 @@ createApp({
 
     methods: {
       loadData() {
-        axios.get("http://localhost:8080/api/clients/current")
+        axios.get("/api/clients/current")
             .then(response => {
                 this.accounts = response.data.accounts;
                 this.accountsActive = this.accounts.filter(account => account.active == true)

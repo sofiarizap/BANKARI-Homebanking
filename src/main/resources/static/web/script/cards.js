@@ -21,7 +21,7 @@ createApp({
   },
   methods:{
     loadData: function(){
-      axios.get("http://localhost:8080/api/clients/current")
+      axios.get("/api/clients/current")
       .then( res =>{
         this.client= res.data;
         this.cards = res.data.card
@@ -56,7 +56,7 @@ createApp({
       });
 },
 cardVencida(){
-    axios.get("http://localhost:8080/api/clients/current")
+    axios.get("/api/clients/current")
     .then( res =>{
       this.cards = res.data.card
       var today = new Date();

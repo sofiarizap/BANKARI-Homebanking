@@ -20,7 +20,7 @@ createApp({
   },
   methods:{
     loadData: function(){
-      this.url =`http://localhost:8080/api/accounts/${this.id}`
+      this.url =`/api/accounts/${this.id}`
       axios.get(this.url)
       .then( res =>{
         this.transactions = res.data.transactions.sort((a, b)  => b.id - a.id)

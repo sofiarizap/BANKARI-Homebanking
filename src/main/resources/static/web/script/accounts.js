@@ -14,7 +14,7 @@ createApp({
     }
   },
   created(){
-    this.url = "http://localhost:8080/api/clients/current";
+    this.url = "/api/clients/current";
     this.loadData() 
     console.log(this.accounts)
   },  
