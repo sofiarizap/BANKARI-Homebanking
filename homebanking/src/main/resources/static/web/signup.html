@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Sing Up | BANKARI</title>
+  <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sweetalert2.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div id="app">
+<div class="container">
+    <section id="formHolder">
+      <div class="row">
+        <div class="col-sm-6 brand">
+            <div class="heading">
+              <img class="bankari" src="./assets/Images/BANKARI.png" alt="">
+              <p>Sign up</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6 form">
+            
+            <div class="signup form-peice">
+              <form class="signup-form"   @submit.prevent="AddClient">
+
+
+                  <div class="form-group">
+                    <input type="text" required class="form-control mt-5" v-model="firstName" placeholder="Name" aria-label="Username">
+                  </div>
+
+                  <div class="form-group">
+                    <input type="text" required class="form-control mt-5" v-model="lastName" placeholder="Last Name" aria-label="Username">
+                  </div>
+
+                  <div class="form-group">
+                    <input type="email" required class="form-control mt-5" v-model="email" class="email"  placeholder="Email Adderss" >
+                  </div>
+
+                  <div class="form-group">
+                    <input type="password" required class="form-control mt-5" v-model="password" placeholder="Password" class="pass" >
+                  </div>
+                  
+
+                  <div class="CTA">
+                    <button> Sing Up</button>
+                    <a href="./login.html" class="ms-4 mt-2 letra">I have an account</a>
+                  </div>
+                  <div class="mt-5">
+                    <br>
+                    <br>
+                    <p class="letra">Join us, create an account here</p>
+                  </div>
+              </form>
+            </div>
+        </div>
+      </div>
+
+  </section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script  src="./script/signup.js"></script>
+
+</body>
+</html>

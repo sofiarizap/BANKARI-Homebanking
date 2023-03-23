@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
+    <title>Home | BANKARI </title>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <nav class="navbar navbar-expand-lg  container-fluid">
+        <div class="container-fluid d-flex justify-content-center ">
+          <a class="navbar-brand  col-lg-11 col-10" href="#">
+            <img src="./assets/Images/BANKARI.png" alt="logo" class="imglogo  foto-logo " >
+          </a>
+          <div>
+            <a href="./login.html" type="submit"  @click="logout()"><img class="img-logout"src="./assets/Images/logout.png" alt=""></a>
+            <p class="logout">LOGOUT</p>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <aside class="menu-lateral ">
+        <nav class="navbar d-flex flex-column  container-fluid">
+          <br>
+          <br>
+              <ul class="navbar-nav d-flex mt-5  justify-content-end">
+                  <li class="nav-item  nav-button">
+                    <a href="./index.html"class="col-10 col-md-3">
+                      <img src="./assets/Images/home.png" class="img-menu" alt="home">
+                    </a>
+                    <a class="nav-link text-light " aria-current="page" href="./index.html">HOME</a>
+                  </li>
+                  <li class="nav-item   nav-button">
+                    <a href="./accounts.html" class="col-10 col-md-3">
+                      <img src="./assets/Images/account.png" class="img-menu"  alt="account">
+                    </a>
+                    <a class="nav-link text-light" href="./accounts.html">ACCOUNTS</a>
+                  </li>
+                  <li class="nav-item  nav-button">
+                    <a href="./loan-application.html" class="col-10 col-md-3">
+                      <img src="./assets/Images/loan.png" class="img-menu"  alt="transactions">
+                    </a>
+                    <a class="nav-link text-light " href="./loan-application.html">LOANS</a>
+                  </li>
+                  <li class="nav-item  nav-button">
+                    <a href="./cards.html" class="col-10 col-md-3">
+                      <img src="./assets/Images/card.png" class="img-menu"  alt="transactions">
+                    </a>
+                    <a class="nav-link text-light " href="./cards.html">CARDS</a>
+                  </li>
+                  <li class="nav-item  nav-button">
+                    <a href="#" class="col-10 col-md-3">
+                      <img src="./assets/Images/transfer.png" class="img-menu"  alt="transactions">
+                    </a>
+                    <a class="nav-link text-light " href="#">TRANSFERS</a>
+                  </li>
+                </ul>
+        </nav>
+        <div class="logos-redes d-flex flex-wrap justify-content-center align-items-center mt-5">
+          <br>
+          <div class="logos-redes">
+            <a href="#" class=" m-1 redes-sociales">
+              <img src="./assets/Images/facebook.png" class="redes-sociales" alt="facebbok">
+            </a>
+          </div>
+          <div class="logos-redes">
+            <a href="#" class=" m-1">
+              <img src="./assets/Images/instagram.png" class="redes-sociales" alt="instagram">
+            </a>
+          </div>
+          <DIV class="logos-redes">
+            <a href="#" class=" m-1">
+              <img src="./assets/Images/whatsapp.png" class="redes-sociales" alt="whatsapp">
+            </a>
+          </DIV>
+        </div>
+      </aside>
+      <div class="contenedor d-flex flex-column justify-content-evenly">
+        <h1>TRANSFER YOUR MONEY</h1>
+        <div class="d-flex justify-content-center">
+
+        <div class="contain-trans d-flex justify-content-between flex-wrap">
+          <div class="titulo-logo d-flex flex-column justify-content-center col-lg-6 align-items-center">
+            <img src="./assets/Images/transfer.png"  class="img-formulario mb-2" alt="">
+            <h3 class="text-center">FAST TRANSACTIONS</h3>
+          </div>
+        <section class="col-lg-6 formulario">
+          <div>
+            <h5>ORIGIEN ACCOUNT</h5>
+          <select class=" form-select box-shadow " aria-label="Default select example " name="cuenta " v-model="numberOrigin">
+            <option v-for="account of accounts"   :value=account.number>{{account.number}}  Balance : {{account.balance.toLocaleString('en-US', {style:"currency", currency:"USD"})}}</option>
+          </select>
+          <h5 class="mt-2">DESTINATION ACCOUNT</h5>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="cuenta" v-model="cuentaDestino" value="ownAccount">
+                  <label class="form-check-label ">Your Accounts</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="cuenta" v-model="cuentaDestino"  value="anotherAccount" >
+                  <label class="form-check-label "> Another Accounts</label>
+              </div>
+              
+              <div>
+                <div class="form-trans " v-if="cuentaDestino == `anotherAccount`" >
+                  <h5>DESTINATION ACCOUNT NUMBER</h5>
+                  <input type="text " placeholder="Number Account"  class="form-control box-shadow " v-model="numberDestiny">
+                </div>
+                <select class=" form-select box-shadow " v-if="cuentaDestino == `ownAccount`" aria-label="Default select example " name="cuenta " v-model="numberDestiny">
+                  <template v-for="account of accounts">
+                    <option  v-if="!account.number.includes(numberOrigin)" :value=account.number>{{account.number}} </option>
+                  </template>
+                </select>
+
+                <div class="form-trans ">
+                  <h5 class="mt-2">AMOUNT</h5>
+                  <input type="text " id="descripción "  class="form-control box-shadow " placeholder="Amunt" v-model="amount">
+                </div>
+                <div class="form-trans ">
+                  <h5 class="mt-2" >DESCRIPTION</h5>
+                  <input type="text "  class="form-control box-shadow " id="descripción " placeholder="Description" v-model="description ">
+                </div>
+              </div>
+              
+
+              <form >
+                  <button type="button" class="btn boton mt-4 text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  TRANSFER
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="staticBackdropLabel">TRANSFER IN PROCESS</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ARE YOU SURE YOU WANT TO MAKE THIS TRANSFER?
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                                  <button type="button" class="btn btn-primary" @click="newtrans()">YES</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </section>
+    </div>
+      </div>
+        
+      </div>
+      
+    </main>
+    <footer>
+      <div class="fotter-top" >
+        <div class="small-card">
+          <a href="#">
+            <img src="./assets/Images/chat.png" class="comunicacion-icono" alt="chat">
+          </a>
+          <h3><strong>Online Chat</strong></h3>
+        </div>
+        <div class="small-card">
+          <a href="#">
+            <img src="./assets/Images/llamadas.png" class="comunicacion-icono" alt="chat">
+          </a>
+          <h3><strong>Call us on our line</strong> </h3>
+        </div>
+        <div class="small-card">
+          <a href="#">
+            <img src="./assets/Images/tellamamos.png" class="comunicacion-icono" alt="chat">
+          </a>
+          <h3><strong> Do you prefer that we call you?</strong></h3>
+        </div>
+      </div>
+      <div class="fotter-bottom">
+        <img src="./assets/Images/footer.png" class="footer-imagen"alt="logo">
+      <h4>Copyright © 2023 HomeBanking BANKARI
+        </h4>
+      </div>
+      
+      
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./script/transfers.js"></script>
+  
+</body>
+</html>
