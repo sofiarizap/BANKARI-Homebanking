@@ -87,7 +87,7 @@
       </aside>
       <div class="contenedor d-flex flex-column ">
         <h1 v-cloak> {{client.firstName.toUpperCase()}} {{client.lastName.toUpperCase()}} THESE ARE YOUR CARDS! </h1>
-        <div id="carouselExample" class="carousel slide  d-flex flex-column ">
+        <div class="carousel slide  d-flex flex-column "  id="carouselExampleSlidesOnly"  data-bs-ride="carousel">
           <div class="carousel-inner ">
             <div class="carousel-item active   ">
               <div class="d-flex justify-content-center titulo-card">
@@ -167,14 +167,14 @@
           <h3  v-if="debitCard && !debitCard.length" class="d-flex mt-5 justify-content-center">You don't have Debit Cards yet</h3>
         </div>
           </div>
-          <button class="carousel-control-prev ms-5 " type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <!-- <button class="carousel-control-prev ms-5 " type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon ms-5  " aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
+          </button> -->
         </div>
       </div>
     </main>
@@ -201,11 +201,13 @@
       </div>
       <div class="fotter-bottom">
         <img src="./assets/Images/footer.png" class="footer-imagen"alt="logo">
-        <div class="d-flex justify-content-center mt-2">
+        <div class="d-flex justify-content-center align-items-center align-content-center">
           <a href="https://github.com/sofiarizap">
-            <img src="./assets/Images/github.png" class="img-menu" alt="">
+            <img src="./assets/Images/github.png" class="img-git " alt="">
           </a>
-          <p>Copyright © 2023 HomeBanking BANKARI</p>
+          <div class="d-flex justify-content-center align-items-center align-content-center ">
+            <p class="align-items-center mt-3 ">Copyright © 2023 HomeBanking BANKARI</p>
+          </div>
         </div>
       </div>
       

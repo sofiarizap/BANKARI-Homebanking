@@ -20,7 +20,7 @@ createApp({
             .then(response => {
               Swal.fire({
                 icon: 'success',
-                title: 'Signed in successfully',
+                title: 'WELCOME',
                 showClass: {
                   popup: 'animate__animated animate__fadeInDown'
                 }

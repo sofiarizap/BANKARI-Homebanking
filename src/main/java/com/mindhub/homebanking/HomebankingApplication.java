@@ -33,8 +33,8 @@ public class HomebankingApplication {
 																		ClientLoanRepository clientLoanRepository, CardRepository cardRepository) {
 		return (args) -> {
 			Client melbaClient = new Client("Melba", "Morel", "melba@mindhub.com", passwordEncoder.encode("melba123"));
-			Account accountOneMelba = new Account("VIN001", LocalDateTime.now(), AccountType.SAVING, 5000.0,melbaClient, true );
-			Account accountTwoMelba = new Account("VIN002", LocalDateTime.now().plusDays(1), AccountType.CURRENT,7500.0, melbaClient, true);
+			Account accountOneMelba = new Account("VIN-001", LocalDateTime.now(), AccountType.SAVING, 5000.0,melbaClient, true );
+			Account accountTwoMelba = new Account("VIN-002", LocalDateTime.now().plusDays(1), AccountType.CURRENT,7500.0, melbaClient, true);
 			clientRepository.save(melbaClient);
 			melbaClient.addAccounts(accountOneMelba);
 			melbaClient.addAccounts(accountTwoMelba);
@@ -86,8 +86,8 @@ public class HomebankingApplication {
 			// creación de cliente 2 con sus cuentas, transacciones y prestamos
 
 			Client pabloClient = new Client("Pablo", "Rodriguez", "pablo@mindhub.com", passwordEncoder.encode("pablo123"));
-			Account accountOnePablo = new Account("VIN003", LocalDateTime.now(), AccountType.SAVING, 1000.0,pabloClient, true);
-			Account accountTwoPablo = new Account("VIN004", LocalDateTime.now().plusDays(1),AccountType.SAVING,  3500.0, pabloClient, true);
+			Account accountOnePablo = new Account("VIN-003", LocalDateTime.now(), AccountType.SAVING, 1000.0,pabloClient, true);
+			Account accountTwoPablo = new Account("VIN-004", LocalDateTime.now().plusDays(1),AccountType.SAVING,  3500.0, pabloClient, true);
 			clientRepository.save(pabloClient);
 			pabloClient.addAccounts(accountOnePablo);
 			pabloClient.addAccounts(accountTwoPablo);

@@ -5,7 +5,7 @@ public final class AccountUtils {
 
   public static String getAccountNumber() {
     String newAccountNumber;
-    newAccountNumber = "VIN" + getRandomInt(00000000, 99999999);
+    newAccountNumber = "VIN-" + getRandomInt(00000000, 99999999);
     return newAccountNumber;
   }
 

@@ -27,7 +27,7 @@ createApp({
         .then(res => {
           Swal.fire({
             icon: 'success',
-            title: 'WELCOME TO BANKARI',
+            title: 'WELCOME',
             showClass: {
               popup: 'animate__animated animate__fadeInDown'
             },

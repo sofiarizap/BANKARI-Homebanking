@@ -126,9 +126,14 @@ border-radius: 5px;
   width: 32px;
   height: 28px;
 }
+.img-git{
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+}
 .img-acc{
-  width: 32px;
-  height: 30px;
+  width: 42px;
+  height: 42px;
 }
 @media (min-width: 0) and (max-width: 769px){
   .navbar-nav .nav-link{
@@ -142,6 +147,11 @@ border-radius: 5px;
     width: 25px;
     height: 22px;
   }
+  .img-acc{
+    width: 32px;
+    height: 30px;
+  }
+
 }
 .contenedor{
   width: 89%;
@@ -179,7 +189,7 @@ border-radius: 5px;
 .texto-caja{
   position: absolute;
   top: 20%;
-  left: 90%;
+  left: 89.7%;
   transform: translate(-50%, -50%);
   background-color: rgba(18, 18, 75, 0.79);
   color: #ffffff;
@@ -187,6 +197,14 @@ border-radius: 5px;
   width: 18vw;
   padding: 2vw 1vw 0vw 1vw ;
   margin-top: 14.6vw;
+}
+.modal{
+  padding: 5px;
+  background-color: #4e94cd5a;
+}
+.modal-content{
+  border: 2px black solid !important;
+  background-color: #9fcef4f0 !important;
 }
 .caja-imagenes{
   justify-content: center;
@@ -287,6 +305,10 @@ footer{
 .comunicacion-icono{
   width: 60px;
   margin: 0.4rem;
+}
+.fotter-bottom p{
+  padding-right: 5px;
+
 }
 @media (min-width: 0px) and (max-width: 600px){
   .comunicacion-icono{
