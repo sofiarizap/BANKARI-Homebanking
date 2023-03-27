@@ -49,7 +49,7 @@ public class RepositoriesTest {
   @Test
   public void existAccount(){
     List<Account> accounts = accountRepository.findAll();
-    assertThat(accounts, hasItem(hasProperty("number", is("VIN001"))));
+    assertThat(accounts, hasItem(hasProperty("number", is("VIN-001"))));
   }
 
   @Test
