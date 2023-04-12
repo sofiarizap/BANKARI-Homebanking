@@ -56,7 +56,6 @@ public class Client{
         this.lastName = lastName;
     }
 
-    public void save(Client client) {}
 
     public Set<Account> getAccounts() {
         return accounts;

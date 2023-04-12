@@ -87,7 +87,7 @@
       </aside>
       <div class="contenedor d-flex flex-column ">
         <h1 v-cloak> {{client.firstName.toUpperCase()}} {{client.lastName.toUpperCase()}} THESE ARE YOUR CARDS! </h1>
-        <div class="carousel slide  d-flex flex-column "  id="carouselExampleSlidesOnly"  data-bs-ride="carousel">
+        <div class="carousel  d-flex flex-column "  id="carouselExampleSlidesOnly"  data-bs-ride="carousel">
           <div class="carousel-inner ">
             <div class="carousel-item active   ">
               <div class="d-flex justify-content-center titulo-card">
@@ -167,14 +167,14 @@
           <h3  v-if="debitCard && !debitCard.length" class="d-flex mt-5 justify-content-center">You don't have Debit Cards yet</h3>
         </div>
           </div>
-          <!-- <button class="carousel-control-prev ms-5 " type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <button class="carousel-control-prev  mt-0 ms-5 " type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon ms-5  " aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <button class="carousel-control-next mt-0 mb-0 ms-0 me-0" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button> -->
+          </button>
         </div>
       </div>
     </main>

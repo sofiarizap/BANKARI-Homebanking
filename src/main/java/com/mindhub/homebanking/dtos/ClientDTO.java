@@ -20,8 +20,6 @@ public class ClientDTO {
   private Set<ClientLoanDTO> loans;
   private Set<CardDTO> card;
 
-  public ClientDTO(){
-  }
 
   public ClientDTO(Client client) {
 
