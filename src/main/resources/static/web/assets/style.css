@@ -667,9 +667,10 @@ a:hover {
   box-shadow: 2px 8px 5px rgba(62, 61, 61, 0.53); 
 }
 .card-expired{
-  background-color: #080303;
+  background-color: #080404;
   z-index: 9;
 }
+
 .quota{
   background-color: rgb(18, 18, 75);
   border-radius: 5px;
