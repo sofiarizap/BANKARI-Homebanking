@@ -29,7 +29,6 @@ createApp({
         this.balance= res.data.balance
       })
       .catch((error)=>{console.log(error)})
-
   },
 
 }
