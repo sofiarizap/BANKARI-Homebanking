@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
   data(){
     return{
+      
       firstName: "",
       lastName: "",
       email: "",
