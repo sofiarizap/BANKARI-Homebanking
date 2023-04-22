@@ -32,7 +32,7 @@ createApp({
               popup: 'animate__animated animate__fadeInDown'
             },
           })
-          setTimeout(() => window.location.href = "/web/accounts.html", 2000)
+          setTimeout(() => window.location.href = "/web/accounts.html", 2200)
       })
             .catch(error => {
                 console.error(error);
