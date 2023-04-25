@@ -38,7 +38,5 @@ createApp({
                 console.error(error);
             })
     },
-    
   }
-
 }).mount("#app")
