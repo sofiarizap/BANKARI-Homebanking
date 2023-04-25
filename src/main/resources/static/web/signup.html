@@ -14,62 +14,62 @@
 <body>
   
 <div id="app">
-<div class="container">
-    <section id="formHolder">
-      <div class="row">
-        <div class="col-sm-6 brand">
-            <div class="heading">
-              <img class="bankari" src="./assets/Images/BANKARI.png" alt="">
-              <p>Sign Up</p>
-            </div>
-        </div>
+  <div class="container">
+      <section id="formHolder">
+        <div class="row">
+          <div class="col-sm-6 brand">
+              <div class="heading">
+                <img class="bankari" src="./assets/Images/BANKARI.png" alt="">
+                <p>Sign Up</p>
+              </div>
+          </div>
 
-        <div class="col-sm-6 form">
-            
-            <div class="signup form-peice">
-              <form class="signup-form"  @submit.prevent="addClient">
+          <div class="col-sm-6 form">
+              
+              <div class="signup form-peice">
+                <form class="signup-form"  @submit.prevent="addClient">
 
 
-                  <div class="form-group">
-                    <input type="text" required class="form-control mt-2" v-model="firstName" placeholder="Name" aria-label="Username">
-                  </div>
+                    <div class="form-group">
+                      <input type="text" required class="form-control mt-2" v-model="firstName" placeholder="Name" aria-label="Username">
+                    </div>
 
-                  <div class="form-group">
-                    <input type="text" required class="form-control mt-2" v-model="lastName" placeholder="Last Name" aria-label="Username">
-                  </div>
+                    <div class="form-group">
+                      <input type="text" required class="form-control mt-2" v-model="lastName" placeholder="Last Name" aria-label="Username">
+                    </div>
 
-                  <div class="form-group">
-                    <input type="email" required class="form-control mt-2" v-model="email" class="email" placeholder="Email Adderss" >
-                  </div>
+                    <div class="form-group">
+                      <input type="email" required class="form-control mt-2" v-model="email" class="email" placeholder="Email Adderss" >
+                    </div>
 
-                  <div class="form-group">
-                    <input type="password" required class="form-control mt-2" v-model="password"  placeholder="Password" class="pass" >
-                  </div>
+                    <div class="form-group">
+                      <input type="password" required class="form-control mt-2" v-model="password"  placeholder="Password" class="pass" >
+                    </div>
 
-                  
-                  
-                  
                     
-                  
-                  
+                    
+                    
+                      
+                    
+                    
 
-                  <div class="CTA">
-                    <button> Sing Up</button>
-                    <a href="./login.html" class="ms-4 mt-2 letra">I have an account</a>
-                  </div>
-                  <div class="mt-5">
-                    <p class="letra">Join us, create an account here</p>
-                  </div>
-                  <a href="./index.html" class=" mt-2 letra">RETURN HOME...</a>
-              </form>
-            </div>
-            
+                    <div class="CTA">
+                      <button> Sing Up</button>
+                      <a href="./login.html" class="ms-4 mt-2 letra">I have an account</a>
+                    </div>
+                    <div class="mt-5">
+                      <p class="letra">Join us, create an account here</p>
+                    </div>
+                    <a href="./index.html" class=" mt-2 letra">RETURN HOME...</a>
+                </form>
+              </div>
+              
+          </div>
         </div>
-      </div>
 
-  </section>
+    </section>
 
-</div>
+  </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
