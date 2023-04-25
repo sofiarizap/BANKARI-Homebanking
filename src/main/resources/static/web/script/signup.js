@@ -10,7 +10,6 @@ createApp({
       password: "",
       }
     },
-
     methods: {
       addClient(){
         if(this.firstName && this.lastName && this.email.includes("@") && this.password){
