@@ -75,15 +75,7 @@ public class Client{
         accounts.add(account);
     }
 
-    @Override
-    public String toString() {
 
-        return "Clien{" +
-                "first Name=" + firstName + "/" +
-                "Last Name=" + lastName + "/" +
-                "Email=" + email + "/" +
-                "}";
-    }
 
 
 }
