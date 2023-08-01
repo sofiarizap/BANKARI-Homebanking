@@ -1,7 +1,8 @@
 package com.mindhub.homebanking.models;
 
-import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -9,7 +10,6 @@ import java.time.LocalDateTime;
 public class Transaction {
   @Id
   @GeneratedValue (strategy = GenerationType.AUTO, generator = "native")
-  @GenericGenerator(name = "native", strategy = "native")
   private Long id;
   private TransactionType type;
   private Double amount;
